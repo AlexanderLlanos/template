@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .swiper-button-next {
+      bottom: 28px !important;
+      top: initial;
+      background: #78FB4C;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 28px;
+    }
+
+    .swiper-button-prev {
+      bottom: 28px !important;
+      top: initial;
+      background: #78FB4C;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 80px;
+      left: initial;
+    }
+
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+      font-size: 18px;
+      color: #151515;
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%; /* 16/9 ratio */
+      padding-top: 30px; /* IE6 workaround*/
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-responsive iframe,
+    .video-responsive object,
+    .video-responsive embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .acordeon .contenido {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .acordeon .contenedor.activa .contenido {
+      min-height: 190px;
+    }
+
+    [data-scroll] {
+      opacity: 0;
+      will-change: transform, scale, opacity;
+      transform: translateY(6rem) scale(0.93);
+      transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    [data-scroll=in] {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-scroll=in] .char:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <body class="bg-[#151515]">
+    <section class="container mx-auto px-4 lg:px-0 sticky top-5 z-30">
+      <div class="flex items-center justify-center mt-10">
+        <div class="bg-[#EE5C51] flex-col md:flex-row w-full lg:w-8/12 py-6 rounded-md flex items-center justify-center gap-2 md:gap-10 shadow-[0_10px_20px_0_rgba(238,92,81,0.2)]">
+          <p class="text-xl lg:text-2xl text-white font-bold">CUPOS DISPONIBLES SÓLO POR :</p>
+          <div class="flex items-center gap-2">
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">dias</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">hor.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">min.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">seg.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container mx-auto px-4 lg:px-0">
+      <div class="flex items-center justify-center flex-col pt-10 text-center">
+        <h1 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">Aprende a hablar en público</h1>
+        <p class="text-white md:w-8/12 lg:w-5/12 mb-8">Aprende <span class="font-bold">HOY</span> a gestionar tu <span class="font-bold">MIEDO</span> al <span class="font-bold">HABLAR</span> en <span class="font-bold">PÚBLICO</span> y expresarte con fluidez en un escenario o ante una Cámara</p>
+        <a class="hover:bg-[#3FFB00] animate-bounce bg-[#78FB4C] py-6 px-10 rounded-full text-[#151515] w-full md:w-fit text-xl md:text-2xl font-bold shadow-[0_10px_20px_0_rgba(120,251,76,0.2)]" href="">QUIERO HABLAR EN PÚBLICO</a>
+        <div class="relative w-full md:w-10/12 lg:w-8/12 mt-10">
+          <video class="rounded-md w-full" width="400" controls>
+            <source src="./video/test.mp4" type="video/mp4">
+          </video>
+          <img class="absolute top-[-31px] left-[-36px] hidden md:block" src="./img/dto.svg" alt="">
+        </div>
+      </div>  
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0" data-scroll>
+      <div class="flex items-center justify-center flex-col text-center pt-40">
+        <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">ESTO ES LO QUE LOGRARÁS</h2>
+        <p class="text-white md:w-8/12 lg:w-5/12 mb-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        <div class="w-full lg:w-10/12 grid gap-8 md:grid-cols-2 lg:grid-cols-2 pt-10">
+          <div class="flex items-start gap-8">
+            <div class="bg-[#212121] min-w-[53px] min-h-[53px] flex items-center justify-center rounded-full shadow-[0_7px_14px_0_rgba(0,0,0,0.2)]">
+              <i class="text-[#78FB4C] iconoir-check text-3xl"></i>
+            </div>
+            <p class="text-start text-white lg:w-8/12">Desarrollarás la capacidad de gestionar tu miedo al Hablar en Público y podrás hacerlo con fluidez.</p>
+          </div>
+          <div class="flex items-start gap-8">
+            <div class="bg-[#212121] min-w-[53px] min-h-[53px] flex items-center justify-center rounded-full shadow-[0_7px_14px_0_rgba(0,0,0,0.2)]">
+              <i class="text-[#78FB4C] iconoir-check text-3xl"></i>
+            </div>
+            <p class="text-start text-white lg:w-8/12">Aprenderás a contar historias que lleguen al corazón de tu público para reforzar tu mensaje</p>
+          </div>
+          <div class="flex items-start gap-8">
+            <div class="bg-[#212121] min-w-[53px] min-h-[53px] flex items-center justify-center rounded-full shadow-[0_7px_14px_0_rgba(0,0,0,0.2)]">
+              <i class="text-[#78FB4C] iconoir-check text-3xl"></i>
+            </div>
+            <p class="text-start text-white lg:w-8/12">Conocerás cual es la estructura de una Conferencia de Alto Impacto para comunicar mejor tus ideas</p>
+          </div>
+          <div class="flex items-start gap-8">
+            <div class="bg-[#212121] min-w-[53px] min-h-[53px] flex items-center justify-center rounded-full shadow-[0_7px_14px_0_rgba(0,0,0,0.2)]">
+              <i class="text-[#78FB4C] iconoir-check text-3xl"></i>
+            </div>
+            <p class="text-start text-white lg:w-8/12">Descubrirás los secretos de los mejores oradores de la historia (Vestuario, Voz, Lenguaje Corporal…)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container mx-auto px-4 lg:px-0 my-20 md:mt-60 md:mb-40 flex items-center justify-center" data-scroll>
+      <div class="w-full lg:w-10/12 bg-[#212121] relative p-5 md:p-10 rounded-md flex items-start flex-col">
+        <p class="uppercase text-white font-bold text-4xl pb-4">OFERTA EXCLUSIva</p>
+        <div class="bg-[#F6D966] rounded-md py-3 px-10 uppercase">
+          <p class="text-[#212121] text-xl font-bold">¡50% de Descuento!</p>          
+        </div>
+        <div class="flex items-end text-white gap-1 my-5">
+          <span class="text-sm">HOY</span>
+          <span class="text-4xl lg:text-5xl font-bold">$50.00</span>
+          <span class="line-through">$100.00</span>
+        </div>
+        <a class="text-center hover:bg-[#3FFB00] bg-[#78FB4C] py-3 px-4 md:px-8 w-full md:w-fit rounded-full text-[#151515] text-xl font-bold shadow-[0_10px_20px_0_rgba(120,251,76,0.2)]" href="">QUIERO HABLAR EN PÚBLICO</a>
+        <img class="absolute bottom-0 right-0 hidden md:block md:h-[300px] lg:h-[400px]" src="./img/banner1.svg" alt="">
+      </div>
+    </section>
+
+    <section class="bg-[#212121]">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-20">
+          <div class="col-span-3 md:col-span-6 lg:col-span-4">
+            <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">Plan de estudio</h2>
+            <p class="text-white pb-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+            <div class="border-y border-[#F1F1F1] py-5">
+              <p class="text-[#78FB4C] font-medium pb-2">Horario de clases</p>
+              <div class="flex items-center gap-2 pb-2">
+                <i class="text-white iconoir-calendar text-2xl"></i>
+                <p class="text-white">Martes y jueves de 19:00 a 22:00</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="text-white iconoir-calendar text-2xl"></i>
+                <p class="text-white">Sábados de 09:00 a 11:00</p>
+              </div>
+            </div>
+            <a class="flex items-center justify-center w-full border border-[#78FB4C] rounded-full mt-5 py-2 gap-2 text-[#78FB4C]" href="">
+              <i class="iconoir-cloud-download text-2xl"></i>
+              <span>Descargar brochure</span>
+            </a>
+          </div>
+          <div class="col-span-3 md:col-span-6 lg:col-span-8 acordeon">
+            <div class="mb-3 contenedor activa">
+              <div class="bg-[#151515] flex items-center justify-between rounded-md p-4 cursor-pointer">
+                <p class="text-white font-medium">MODULO 1</p>
+                <i class="text-white iconoir-nav-arrow-down text-2xl"></i>
+              </div>
+              <div class="contenido">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-10 p-4 contenido">
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 contenedor">
+              <div class="bg-[#151515] flex items-center justify-between rounded-md p-4 cursor-pointer">
+                <p class="text-white font-medium">MODULO 2</p>
+                <i class="text-white iconoir-nav-arrow-down text-2xl"></i>
+              </div>
+              <div class="contenido">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-10 p-4">
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 contenedor">
+              <div class="bg-[#151515] flex items-center justify-between rounded-md p-4 cursor-pointer">
+                <p class="text-white font-medium">MODULO 3</p>
+                <i class="text-white iconoir-nav-arrow-down text-2xl"></i>
+              </div>
+              <div class="contenido">
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-10 p-4">
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                  <div class="col-span-3">
+                    <p class="text-white font-medium mb-4">Introducción a la Filosofía MEAW y Mordidas Abiertas</p>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                    <div class="flex items-start gap-2 mb-2">
+                      <i class="text-[#78FB4C] iconoir-check-circle text-xl"></i>
+                      <p class="text-white">¿Por qué Meaw? La revolución del Plano Oclusal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 my-20">
+      <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 lg:gap-20 items-center" data-scroll>
+        <div class="col-span-3 md:col-span-6">
+          <img class="mx-auto md:w-6/12 lg:w-full mb-5 lg:mb-0" src="./img/banner2.png" alt="">
+        </div>
+        <div class="col-span-3 md:col-span-6">
+          <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">BENEFICIOS DEL PROGRAMA</h2>
+          <div>
+            <div class="flex items-start gap-2 mb-4">
+              <span class="min-w-[15px] min-h-[15px] bg-[#316160] rounded-full mt-1"></span>
+              <p class="text-white">Tendrás a tu alcance los secretos para Hablar en Público sin miedo, desde la comodidad de tu hogar.</p>
+            </div>
+            <div class="flex items-start gap-2 mb-4">
+              <span class="min-w-[15px] min-h-[15px] bg-[#316160] rounded-full mt-1"></span>
+              <p class="text-white">Te ahorrarás más de USD 200 (valor de otros cursos digitales que enseñan estos mismos temas).</p>
+            </div>
+            <div class="flex items-start gap-2 mb-4">
+              <span class="min-w-[15px] min-h-[15px] bg-[#316160] rounded-full mt-1"></span>
+              <p class="text-white">Podrás estudiar a tu propio ritmo, a la hora que lo desees, y de una forma fácil y garantizada.</p>
+            </div>
+            <div class="flex items-start gap-4 mt-8">
+              <img class="w-[50px] md:w-[120px]" src="./img/sello1.svg" alt="">
+              <img class="w-[50px] md:w-[120px]" src="./img/sello2.svg" alt="">
+              <img class="w-[70px] md:w-[160px]" src="./img/sello3.svg" alt="">
+              <img class="w-[50px] md:w-[120px]" src="./img/sello4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#212121]">
+      <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
+          <div class="col-span-3 md:col-span-6">
+            <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">¿Quién será tu entrenador?</h2>
+            <div>
+              <p class="mb-3 text-white">Soy un ser en pleno proceso de construcción, apasionado por la palabra, padre, comunicador, escritor, speaker, entrenador… En resumen, un amante de la vida y de los retos que esta trae cada día, soy un observador y una persona que considera firmemente que creer es crear.</p>
+              <p class="text-white">Soy el creador de la agencia de comunicación Emprender Pasión y la academia Soy Speaker Latam con la cual he tenido la gran posibilidad de entrenar a cientos de personas en oratoria, ayudándoles a gestionar el Miedo a Hablar en Público para dar un nuevo impulso a sus vidas y sus carreras profesionales.</p>
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-6">
+            <div class="flex items-center justify-center">
+              <div class="relative">
+                <img src="./img/user.png" alt="">
+                <p class="text-white mt-3">Carlos Cardona</p>
+                <p class="text-white text-xl font-bold">Instructor</p>
+                <div class="bg-[#EE5C51] w-[70px] h-[70px] flex items-center justify-center rounded-full absolute right-0 bottom-[80px] shadow-[0_2px_6px_0_rgba(238,92,81,0.2)]">
+                  <i class="text-white iconoir-1st-medal text-4xl"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20 flex items-center justify-center" data-scroll>
+      <div class="lg:w-10/12">
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 lg:gap-20 items-center">
+          <div class="col-span-3 md:col-span-6 mb-5 lg:mb-0">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-[#212121] p-7 rounded-md min-h-[400px] relative">
+                    <img src="./img/user3.png" alt="">
+                    <img class="right-7 top-7 absolute" src="./img/group.svg" alt="">
+                    <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+                    <p class="text-white font-bold">Juan Pepito</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-6">
+            <p class="text-white text-sm font-bold mb-2">TESTIMONIALS</p>
+            <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase mb-4">ESTO DICEN LOS ESTUDIANTES…</h2>
+            <div>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="text-center">
+        <h2 class="text-[#78FB4C] text-4xl lg:text-5xl font-bold uppercase pb-16">¿Estás listo para la aventura?</h2>
+        <div class="flex items-center justify-center">
+          <div class="relative w-10/12 md:w-6/12 lg:w-4/12">
+            <img class="w-full" src="./img/user2.png" alt="">
+            <img class="absolute top-[-40px] right-[-40px] w-[140px]" src="./img/sello1.svg" alt="">
+          </div>
+        </div>
+        <div class="py-10 flex items-center justify-center">
+          <a class="hover:bg-[#3FFB00] animate-bounce bg-[#78FB4C] py-3 px-10 rounded-full text-[#151515] w-full md:w-fit text-xl md:text-2xl font-bold shadow-[0_10px_20px_0_rgba(120,251,76,0.2)]" href="">QUIERO HABLAR EN PÚBLICO</a>
+        </div>
+        <div class="text-center">
+          <p class="text-white">Metodos de pago</p>
+          <img class="mx-auto" src="./img/pago.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#212121]">
+      <div class="container mx-auto px-4 lg:px-0 py-5">
+        <p class="text-white text-center">Copyright 2023</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+
+  <script>
+    ScrollOut({  
+      threshold: .5,
+      once: true
+    });
+
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+
+    var acordeon = document.getElementsByClassName('contenedor');
+    for (i=0; i<acordeon.length; i++) {
+      acordeon[i].addEventListener('click', function () {
+        this.classList.toggle('activa')
+      })
+    }
+  </script>
+
+</html>

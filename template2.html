@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+    }
+
+    [data-scroll] {
+      opacity: 0;
+      will-change: transform, scale, opacity;
+      transform: translateY(6rem) scale(0.93);
+      transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    [data-scroll=in] {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-scroll=in] .char:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <body class="bg-[#151515]">
+    <section class="container mx-auto px-4 lg:px-0 sticky top-5 z-30">
+      <div class="flex items-center justify-center mt-10">
+        <div class="bg-[#D12D5C] flex-col md:flex-row w-full lg:w-8/12 py-6 rounded-md flex items-center justify-center gap-2 md:gap-10">
+          <p class="text-xl lg:text-2xl text-white font-bold">CUPOS DISPONIBLES SÓLO POR :</p>
+          <div class="flex items-center gap-2">
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">dias</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">hor.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">min.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#151515] font-bold">01</span>
+              </div>
+              <span class="text-white text-xs font-medium">seg.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20">
+      <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 lg:gap-20 items-center">
+        <div class="col-span-3 md:col-span-5">
+          <h1 class="mb-10 text-white uppercase font-bold text-4xl md:text-5xl">Comienza tu propio<br><span class="text-[#D12D5C]">Negocio en Linea</span><br>en menos de 30 días</h1>
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-[10px] h-[10px] bg-[#D12D5C] rounded-full"></span>
+              <p class="text-white"><span class="font-bold">SIN</span> comprar productos</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-[10px] h-[10px] bg-[#D12D5C] rounded-full"></span>
+              <p class="text-white"><span class="font-bold">SIN</span> ser experto en ventas</p>
+            </div>
+          </div>
+          <div class="pt-10">
+            <a class="animate-bounce w-full flex items-center justify-center h-[70px] md:w-[333px] text-white bg-[#D12D5C] rounded-full font-bold text-2xl" href=""><span>INICIAR</span></a>
+          </div>
+          <div class="flex items-start gap-3 mt-10">
+            <img class="w-[60px] md:w-[120px]" src="./img/sello1.svg" alt="">
+            <img class="w-[60px] md:w-[120px]" src="./img/sello2.svg" alt="">
+            <img class="w-[80px] md:w-[160px]" src="./img/sello3.svg" alt="">
+            <img class="w-[50px] md:w-[100px]" src="./img/sello4.png" alt="">
+          </div>
+        </div>
+        <div class="col-span-3 md:col-span-7">
+          <video class="rounded-md w-full" height="400" controls>
+            <source src="./video/test.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="flex items-center justify-center text-center">
+        <h2 class="mb-10 text-white uppercase font-bold text-4xl md:text-5xl">LOS <span class="text-[#D12D5C]">3 SIMPLES PASOS</span><br> PARA INICIAR</h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3 pt-10">
+        <div class="bg-[#212121] p-6 rounded-md">
+          <div class="bg-[#151515] w-14 h-14 flex items-center justify-center text-[#D12D5C] text-2xl rounded-full mb-5">
+            <span>1</span>
+          </div>
+          <p class="text-xl text-[#909090] mb-2">Crea tu tienda online</p>
+          <p class="text-white">Apertura una espacio virtual para que tus clientes puedan realizar sus pedidos.</p>
+        </div>
+        <div class="bg-[#212121] p-6 rounded-md">
+          <div class="bg-[#151515] w-14 h-14 flex items-center justify-center text-[#D12D5C] text-2xl rounded-full mb-5">
+            <span>2</span>
+          </div>
+          <p class="text-xl text-[#909090] mb-2">Encuentra un producto ganador</p>
+          <p class="text-white">Descubrir un producto único, que solucione una necesidad y tenga un margen de beneficio atractivo.</p>
+        </div>
+        <div class="bg-[#212121] p-6 rounded-md">
+          <div class="bg-[#151515] w-14 h-14 flex items-center justify-center text-[#D12D5C] text-2xl rounded-full mb-5">
+            <span>3</span>
+          </div>
+          <p class="text-xl text-[#909090] mb-2">Llega a tus clientes potenciales</p>
+          <p class="text-white">Usa el poder de la publicidad segmentada redes sociales para obtener ventas de en tu tienda online.</p>
+        </div>
+      </div>
+      <div class="pt-10 flex items-center justify-center">
+        <a class="animate-bounce w-full md:w-fit flex items-center justify-center h-[70px] px-10 text-center text-white bg-[#D12D5C] rounded-full font-bold text-2xl" href=""><span>Sí, quiero unirme a Lorem Ipsum</span></a>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
+        <div class="col-span-3 md:col-span-6">
+          <img class="mx-auto md:w-6/12 lg:w-full" src="./img/banner2.png" alt="">
+        </div>
+        <div class="col-span-3 md:col-span-6">
+          <h2 class="text-white text-4xl lg:text-5xl font-bold uppercase mb-4 text-center lg:text-left">¿Por qué deberías aprender conmigo?</h2>
+          <div class="text-center lg:text-left">
+            <p class="text-white mb-3">Soy Bruno Aguilar y mentoreo más de 1000 alumnos en varios países de Latinoamérica, llevo 4 años dedicándome profesionalmente a crear negocios rentables por Internet.</p>
+            <p class="text-white mb-3">Creador de la membresía Ecom Mentory Basic, la membresía más completa sobre como empezar en el mundo del comercio electrónico, creando una comunidad de valor y apoyo.</p>  
+            <p class="text-white mb-3">Fundador de diversas tiendas online reconocidas a nivel Latinoamérica, que logran facturar más de 6 cifras por mes.Generador de contenido de negocios, formando una comunidad en redes sociales de más de 60.000 seguidores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gpa-10 lg:gap-20 items-center">
+        <div class="col-span-3 md:col-span-6">
+          <img class="mx-auto w-6/12 md:w-4/12 lg:w-6/12" src="./img/sello1.svg" alt="">
+        </div>
+        <div class="col-span-3 md:col-span-6">
+          <h2 class="text-white text-4xl lg:text-5xl font-bold uppercase mb-4 text-center lg:text-left">Garantía Incondicional</h2>
+          <div class="text-center lg:text-left">
+            <p class="text-white mb-3">Si aún estás con dudas de ingresar a la membresía, voy a hacerte esa decisión mucho más fácil…</p>
+            <p class="text-white mb-3">Tengo tanta confianza de que te van a encantar los resultados que verás en Ecom Mentory Basic que voy a darte una garantía de 7 días.</p>  
+            <p class="text-white mb-3">Lo compras, te conectas a las clases por Zoom, y si por cualquier motivo no te gusta la membresía, solo necesitaras enviar un mensaje a nuestro soporte y te devolvemos el 100% del dinero.</p>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-4 mt-10">
+            <img class="h-[90px]" src="./img/pago.png" alt="">
+            <img class="h-[70px]" src="./img/sello3.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="pt-10 flex items-center justify-center">
+        <a class="animate-bounce w-full md:w-fit flex items-center justify-center h-[70px] px-10 text-center text-white bg-[#D12D5C] rounded-full font-bold text-2xl" href=""><span>QUIERO MI GARANTÍA DE 7 DÍAS!</span></a>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="flex items-center justify-center text-center">
+        <h2 class="mb-10 text-white uppercase font-bold text-4xl md:text-5xl">ELLOS YA ESTÁN APLICANDO<br><span class="text-[#D12D5C]">LO APRENDIDO</span></h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3 pt-10">
+        <div class="bg-[#212121] p-7 rounded-md relative">
+          <img src="./img/user4.png" alt="">
+          <img class="right-7 top-7 absolute" src="./img/group2.svg" alt="">
+          <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+          <p class="text-[#D12D5C] font-bold">Juan Pepito</p>
+        </div>
+        <div class="bg-[#212121] p-7 rounded-md relative">
+          <img src="./img/user4.png" alt="">
+          <img class="right-7 top-7 absolute" src="./img/group2.svg" alt="">
+          <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+          <p class="text-[#D12D5C] font-bold">Juan Pepito</p>
+        </div>
+        <div class="bg-[#212121] p-7 rounded-md relative">
+          <img src="./img/user4.png" alt="">
+          <img class="right-7 top-7 absolute" src="./img/group2.svg" alt="">
+          <p class="text-white text-sm my-5 font-light w-10/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
+          <p class="text-[#D12D5C] font-bold">Juan Pepito</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container mx-auto px-4 lg:px-0 py-20 flex items-center justify-center" data-scroll>
+      <div class="w-full lg:w-10/12 bg-[#212121] relative p-5 md:p-10 rounded-md flex items-start flex-col">
+        <div class="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between w-full gap-10">
+          <div class="flex justify-start flex-col items-center lg:items-start">
+            <p class="uppercase text-white font-bold text-4xl pb-4">OFERTA EXCLUSIva</p>
+            <div class="bg-[#EE5C51] rounded-md py-3 px-10 uppercase">
+              <p class="text-white text-xl font-bold">¡50% de Descuento!</p>          
+            </div>
+            <div class="flex items-end text-white gap-1 mt-5 mb-10">
+              <span class="text-sm">HOY</span>
+              <span class="text-4xl lg:text-5xl font-bold">$50.00</span>
+              <span class="line-through">$100.00</span>
+            </div>
+            <a class="animate-bounce text-center uppercase bg-[#D12D5C] py-3 px-4 md:px-8 w-full md:w-fit rounded-full text-white text-xl font-bold" href="">Sí, quiero unirme a Lorem Ipsum</a>
+          </div>
+          <img class="" src="./img/banner3.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+      <div class="flex items-center justify-center text-center">
+        <h2 class="mb-10 text-white uppercase font-bold text-4xl md:text-5xl">Si ingresas HOY MISMO, recibirás estos BONOS¡ valorados en +100 dólares!<br><span class="text-[#D12D5C]">Totalmente GRATIS</span></h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-2 pt-10">
+        <div class="bg-[#212121] p-7 rounded-md relative flex flex-col md:flex-row items-center gap-6">
+          <div class="relative min-w-[210px] h-full">
+            <img class="h-full w-full object-cover" src="./img/user5.png" alt="">
+            <div class="flex items-center justify-center bg-[#EE5C51] absolute left-[-14px] bottom-[20px] py-3 px-6 rounded-md text-white gap-1">
+              <span>HOY</span>
+              <span class="font-bold text-xl">GRATIS</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white mb-2 font-bold"><span class="text-[#B92A53]">BONO 1:</span> Plantilla Premium</p>
+            <p class="text-white text-sm mb-2">Tendrás acceso a una plantilla del tema Debutify Premium, podrás subirla a tu tienda online y editarla a tu gusto, con todos los extras ilimitados.</p>
+            <p class="text-[#666666] text-sm">Valorado en: $100</p>
+          </div>
+        </div>
+        <div class="bg-[#212121] p-7 rounded-md relative flex flex-col md:flex-row items-center gap-6">
+          <div class="relative min-w-[210px] h-full">
+            <img class="h-full w-full object-cover" src="./img/user5.png" alt="">
+            <div class="flex items-center justify-center bg-[#EE5C51] absolute left-[-14px] bottom-[20px] py-3 px-6 rounded-md text-white gap-1">
+              <span>HOY</span>
+              <span class="font-bold text-xl">GRATIS</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-white mb-2 font-bold"><span class="text-[#B92A53]">BONO 2:</span> Plantilla Premium</p>
+            <p class="text-white text-sm mb-2">Tendrás acceso a una plantilla del tema Debutify Premium, podrás subirla a tu tienda online y editarla a tu gusto, con todos los extras ilimitados.</p>
+            <p class="text-[#666666] text-sm">Valorado en: $100</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#212121]">
+      <div class="container mx-auto px-4 lg:px-0 py-5">
+        <p class="text-white text-center">Copyright 2023</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+
+  <script>
+    ScrollOut({  
+      threshold: .5,
+      once: true
+    });
+  </script>
+
+</html>

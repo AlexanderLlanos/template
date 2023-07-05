@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    [data-scroll] {
+      opacity: 0;
+      will-change: transform, scale, opacity;
+      transform: translateY(6rem) scale(0.93);
+      transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    [data-scroll=in] {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-scroll=in] .char:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <body class="bg-[#316160]">
+    <section class="container mx-auto px-4 lg:px-0 sticky top-0 z-30">
+      <div class="flex items-center justify-center pt-10">
+        <div class="bg-[#D4EE46] flex-col w-full lg:w-8/12 py-6 rounded-md flex items-center justify-center gap-2">
+          <p class="text-xl lg:text-2xl text-[#316160] font-extrabold">LA OFERTA SE ACABA EN:</p>
+          <div class="flex items-center gap-2">
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#316160] font-bold">01</span>
+              </div>
+              <span class="text-[#316160] text-xs font-medium">dias</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#316160] font-bold">01</span>
+              </div>
+              <span class="text-[#316160] text-xs font-medium">hor.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#316160] font-bold">01</span>
+              </div>
+              <span class="text-[#316160] text-xs font-medium">min.</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-1">
+              <div class="bg-white w-[49px] h-[38px] flex items-center justify-center rounded-md">
+                <span class="text-xl text-[#316160] font-bold">01</span>
+              </div>
+              <span class="text-[#316160] text-xs font-medium">seg.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#316160]">
+      <div class="container mx-auto px-4 lg:px-0 py-20">
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 lg:gap-20 items-center">
+          <div class="col-span-3 md:col-span-6">
+            <div class="w-10/12 relative mx-auto shadow-[40px_40px_1px_0_rgba(0,0,0,0.2)] rounded-3xl">
+              <img class="w-full rounded-xl" src="./img/banner4.png" alt="">
+              <img class="absolute top-[-33px] right-[30px]" src="./img/pago2.svg" alt="">
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-6">
+            <h1 class="mb-10 text-white uppercase font-extrabold text-4xl md:text-5xl text-center lg:text-start mt-16 lg:mt-0">ELEVA TUS HABILIDADES DE <span class="text-[#D4EE46]">DISEÑO DE CEJAS Y GENERA TUS PROPIOS INGRESOS</span></h1>
+            <div class="pt-10 flex justify-center lg:justify-start">
+              <a class="animate-bounce w-full flex items-center justify-center h-[70px] md:w-[333px] text-white bg-[#F1213B] rounded-md font-bold text-2xl shadow-[0_10px_20px_0_rgba(241,33,59,0.2)]" href=""><span>INSCRÍBETE</span></a>
+            </div>
+            <div class="flex justify-center lg:justify-start items-start gap-3 mt-10">
+              <img class="w-[60px] md:w-[120px]" src="./img/sello1.svg" alt="">
+              <img class="w-[60px] md:w-[120px]" src="./img/sello2.svg" alt="">
+              <img class="w-[80px] md:w-[160px]" src="./img/sello3.svg" alt="">
+              <img class="w-[50px] md:w-[100px]" src="./img/sello4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto px-4 lg:px-0 pb-20 pt-28" data-scroll>
+        <div class="flex items-center justify-center flex-col text-center">
+          <h2 class="text-[#131729] mb-2 uppercase font-extrabold text-3xl md:text-4xl">Motivos para ser parte del Masterclass</h2>
+          <p class="text-center text-[#717373] md:w-6/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+        <div class="grid gap-16 lg:grid-cols-3 py-10">
+          <div class="bg-white p-6 rounded-md cursor-pointer hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] w-14 h-14 flex items-center justify-center text-[#316160] text-4xl rounded-full mb-5">
+              <i class="iconoir-smartphone-device"></i>
+            </div>
+            <p class="text-xl text-[#131729] font-bold mb-2">Curso Online en diferentes plataformas</p>
+            <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          </div>
+          <div class="bg-white p-6 rounded-md cursor-pointer hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] w-14 h-14 flex items-center justify-center text-[#316160] text-4xl rounded-full mb-5">
+              <i class="iconoir-1st-medal"></i>
+            </div>
+            <p class="text-xl text-[#131729] font-bold mb-2">Certificado avalado por VERUSKA VILLAMIZAR</p>
+            <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          </div>
+          <div class="bg-white p-6 rounded-md cursor-pointer hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] w-14 h-14 flex items-center justify-center text-[#316160] text-4xl rounded-full mb-5">
+              <i class="iconoir-presentation"></i>
+            </div>
+            <p class="text-xl text-[#131729] font-bold mb-2">Aprende a tu propio ritmo</p>
+            <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto px-4 lg:px-0 flex pb-20 items-center justify-center" data-scroll>
+        <div class="w-full md:w-10/12 bg-[#316160] relative p-5 md:p-10 rounded-md flex items-start flex-col">
+          <div class="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between w-full gap-10">
+            <div class="flex justify-start flex-col items-center lg:items-start">
+              <p class="uppercase text-white font-extrabold text-4xl pb-1">OFERTA EXCLUSIva</p>
+              <p class="uppercase text-[#D4EE46] font-extrabold text-2xl">CERTIFICADO Y REGALOS</p>
+              <div class="flex items-end text-white gap-2 mt-5 mb-10">
+                <span class="text-sm pb-1">HOY</span>
+                <span class="text-4xl lg:text-5xl font-extrabold">9,99<span class="text-3xl">USD</span></span>
+                <span class="text-[#ADC0BF] line-through pb-1">$100.00</span>
+              </div>
+              <a class="animate-bounce text-center uppercase bg-[#F1213B] py-3 px-4 md:px-8 w-full md:w-fit rounded-md text-white text-xl font-bold" href="">Sí, quiero unirme a Lorem Ipsum</a>
+            </div>
+            <img class="max-h-[300px]" src="./img/banner5.svg" alt="">
+          </div>
+          <img class="absolute top-[-30px] left-[-35px]" src="./img/dto.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5FEFF]">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="flex items-center text-center lg:text-start lg:items-start justify-center flex-col">
+          <h2 class="text-[#131729] mb-2 uppercase font-extrabold text-3xl md:text-4xl">Nuestros cursos</h2>
+          <p class="text-[#717373] md:w-6/12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2 pt-10">
+          <div class="bg-white p-7 rounded-2xl shadow-[0_20px_50px_0_rgba(49,97,96,0.1)] relative flex flex-col md:flex-row items-center gap-6">
+            <div class="relative min-w-[210px] h-full">
+              <img class="h-full w-full object-cover" src="./img/user5.png" alt="">
+              <div class="flex items-center justify-center bg-[#EE5C51] absolute left-[-14px] bottom-[20px] py-3 px-6 rounded-md text-white gap-1">
+                <span class="font-bold">Certificado gratis</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-white font-bold"><span class="text-[#131729]">CLASE NRO 1</p>
+              <p class="text-sm text-[#717373]">14 de julio</p>
+              <div class="mt-3">
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 mt-4">
+                <i class="iconoir-clock text-[#316160]"></i>
+                <p class="text-sm text-[#316160] font-bold">1h 40min</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-7 rounded-2xl shadow-[0_20px_50px_0_rgba(49,97,96,0.1)] relative flex flex-col md:flex-row items-center gap-6">
+            <div class="relative min-w-[210px] h-full">
+              <img class="h-full w-full object-cover" src="./img/user5.png" alt="">
+              <div class="flex items-center justify-center bg-[#EE5C51] absolute left-[-14px] bottom-[20px] py-3 px-6 rounded-md text-white gap-1">
+                <span class="font-bold">Certificado gratis</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-white font-bold"><span class="text-[#131729]">CLASE NRO 1</p>
+              <p class="text-sm text-[#717373]">14 de julio</p>
+              <div class="mt-3">
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 mt-4">
+                <i class="iconoir-clock text-[#316160]"></i>
+                <p class="text-sm text-[#316160] font-bold">1h 40min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gpa-10 lg:gap-20 items-center">
+          <div class="col-span-3 col-span-6 lg:col-span-5">
+            <img class="mx-auto w-4/12 lg:w-6/12" src="./img/sello1.svg" alt="">
+          </div>
+          <div class="col-span-3 col-span-6 lg:col-span-7">
+            <div class="lg:w-8/12">
+              <h2 class="text-[#131729] w-10/12 mx-auto lg:w-full mb-4 uppercase text-center lg:text-start font-extrabold text-3xl md:text-4xl">Compra hoy y accede a la siguiente oferta</h2>
+              <div class="w-10/12 lg:w-full mx-auto">
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+                </div>
+                <div class="flex items-start gap-2 mb-1">
+                  <span class="min-w-[5px] min-h-[5px] bg-[#316160] rounded-md mt-[6px]"></span>
+                  <p class="text-[#717373] text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>
+                </div>
+              </div>
+              <div class="flex items-end justify-center lg: justify-start text-[#316160] gap-2 mt-5 mb-10">
+                <span class="text-sm pb-1">HOY</span>
+                <span class="text-4xl lg:text-5xl font-extrabold">9,99<span class="text-3xl">USD</span></span>
+                <span class="text-[#ADC0BF] line-through pb-1">20,00USD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-10 flex items-center justify-center">
+          <a class="animate-bounce w-full md:w-fit flex items-center justify-center h-[70px] px-10 text-center text-white bg-[#F1213B] rounded-md font-extrabold text-2xl" href=""><span>INSCRÍBETE AL PROGRAMA AQUÍ</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5FEFF]">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
+          <div class="col-span-3 md:col-span-6">
+            <img class="mx-auto md:w-6/12 lg:w-full" src="./img/banner2.png" alt="">
+          </div>
+          <div class="col-span-3 md:col-span-6">
+            <div class="mx-auto flex flex-col text-center lg:text-start items-center lg:items-start w-10/12">
+              <h2 class="text-[#131729] mb-4 uppercase font-extrabold text-3xl md:text-4xl">¿Quién dictara el programa?</h2>
+              <p class="mb-10 text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+              <a class="w-full flex items-center justify-center h-[70px] md:w-[333px] text-white bg-[#F1213B] rounded-md font-bold text-2xl shadow-[0_10px_20px_0_rgba(241,33,59,0.2)]" href=""><span>INSCRÍBETE</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <h2 class="text-[#131729] uppercase font-extrabold text-3xl md:text-4xl text-center mb-10">Accede hoy y certifícate</h2>
+        <div class="flex items-center justify-center">
+          <img class="md:w-8/12" src="./img/banner6.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F5FEFF]">
+      <div class="container mx-auto px-4 lg:px-0 py-20" data-scroll>
+        <div class="flex items-center justify-center flex-col">
+          <h2 class="text-[#131729] md:w-8/12 mb-2 uppercase font-extrabold text-3xl md:text-4xl text-center">Si accedes hoy, obtendrás estos bonos de regalo</h2>
+        </div>
+        <div class="grid gap-10 lg:grid-cols-3 py-10">
+          <div class="p-6 rounded-md flex items-start gap-5 cursor-pointer hover:bg-white hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] min-w-[30px] min-h-[30px] flex items-center justify-center text-[#316160] text-xl rounded-full mb-5 shadow-[0_10px_20px_0_rgba(0,0,0,0.2)]">
+              <i class="iconoir-check"></i>
+            </div>
+            <div>
+              <p class="text-xl text-[#316160] uppercase font-bold mb-2">Acceso al curso por 30 dias</p>
+              <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-md flex items-start gap-5 cursor-pointer hover:bg-white hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] min-w-[30px] min-h-[30px] flex items-center justify-center text-[#316160] text-xl rounded-full mb-5 shadow-[0_10px_20px_0_rgba(0,0,0,0.2)]">
+              <i class="iconoir-check"></i>
+            </div>
+            <div>
+              <p class="text-xl text-[#316160] uppercase font-bold mb-2">Acceso al curso por 30 dias</p>
+              <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-md flex items-start gap-5 cursor-pointer hover:bg-white hover:shadow-[0_20px_50px_0_rgba(49,97,96,0.1)]">
+            <div class="bg-[#F6D966] min-w-[30px] min-h-[30px] flex items-center justify-center text-[#316160] text-xl rounded-full mb-5 shadow-[0_10px_20px_0_rgba(0,0,0,0.2)]">
+              <i class="iconoir-check"></i>
+            </div>
+            <div>
+              <p class="text-xl text-[#316160] uppercase font-bold mb-2">Acceso al curso por 30 dias</p>
+              <p class="text-[#717373]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#316160]">
+      <div class="container mx-auto px-4 lg:px-0 py-5">
+        <p class="text-white text-center">Copyright 2023</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://unpkg.com/scroll-out@2.2.3/dist/scroll-out.min.js"></script>
+
+  <script>
+    ScrollOut({  
+      threshold: .5,
+      once: true
+    });
+  </script>
+
+</html>
